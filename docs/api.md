@@ -1,5 +1,3 @@
-Create docs/api.md:
-
 # API
 
 ## GET /health
@@ -15,10 +13,10 @@ Batch FAST scoring.
     {"idx":1,"step":95,"type":"TRANSFER","amount":1000,"nameOrig":"U1","nameDest":"R1"}
   ]
 }
+```
 
-
-Response
-
+**Response**
+```json
 {
   "count": 1,
   "results": [
@@ -35,21 +33,22 @@ Response
     }
   ]
 }
+```
 
-POST /v1/graph/precision
+## POST /v1/graph/precision
 
 Refine one focus transaction using 7d/30d subgraphs.
 
-Request
-
+**Request**
+```json
 {
   "transactions":[{"idx":1,"step":95,"type":"TRANSFER","amount":1000,"nameOrig":"U1","nameDest":"R1"}],
   "focus_idx": 1
 }
+```
 
-
-Response
-
+**Response**
+```json
 {
   "focus_idx": 1,
   "ring_score_7d": 0.88,
@@ -58,6 +57,7 @@ Response
   "reasons_7d": [{"feature":"shared_receiver_degree","value":12,"impact":0.21}],
   "reasons_30d": [{"feature":"shared_receiver_degree","value":35,"impact":0.18}]
 }
+```
 
 
 Create `docs/architecture.md`:
@@ -74,3 +74,4 @@ Shared key for merging: `idx`
 
 Week-6: file hand-off (CSVs/JSON).  
 Final: services call `/v1/graph/score` and (optional) `/v1/graph/precision`.
+```
