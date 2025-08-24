@@ -1,0 +1,76 @@
+{
+  "transactions": [
+    {
+      "idx": 101,
+      "step": 200,
+      "type": "TRANSFER",
+      "amount": 5000.00,
+      "nameOrig": "C1111111111",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 102,
+      "step": 201,
+      "type": "TRANSFER",
+      "amount": 7500.00,
+      "nameOrig": "C2222222222",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 103,
+      "step": 202,
+      "type": "TRANSFER",
+      "amount": 12000.00,
+      "nameOrig": "C3333333333",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 104,
+      "step": 203,
+      "type": "TRANSFER",
+      "amount": 8000.00,
+      "nameOrig": "C4444444444",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 105,
+      "step": 204,
+      "type": "TRANSFER",
+      "amount": 15000.00,
+      "nameOrig": "C5555555555",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 106,
+      "step": 205,
+      "type": "CASH_OUT",
+      "amount": 25000.00,
+      "nameOrig": "C6666666666",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 107,
+      "step": 206,
+      "type": "CASH_OUT",
+      "amount": 18000.00,
+      "nameOrig": "C7777777777",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    },
+    {
+      "idx": 108,
+      "step": 207,
+      "type": "CASH_OUT",
+      "amount": 22000.00,
+      "nameOrig": "C8888888888",
+      "nameDest": "M9999999999",
+      "isFraud": 1
+    }
+  ]
+}
