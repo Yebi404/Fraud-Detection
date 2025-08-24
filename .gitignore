@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# OS
+.DS_Store
+
+# Outputs (keep sample artifacts you want to demo)
+outputs/*
+!outputs/sample_graph_score.json
+!outputs/ring_scores_window.csv
+!outputs/fraud_ring_7d.html
+!outputs/fraud_ring_30d.html
