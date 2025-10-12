@@ -1,0 +1,1902 @@
+[
+    {
+        "transaction_id": 0,
+        "anomaly_score": 0.0,
+        "risk_score_baseline": 0.00376974162645638,
+        "top_features": [
+            "idx",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "idx": -0.05137510680127889,
+            "nameDest_M6": 0.05134229496121406,
+            "type_TRANSFER": -0.04416041179560125,
+            "nameDest_M2": 0.04265714766457677,
+            "nameDest_M10": 0.039276760257780555
+        }
+    },
+    {
+        "transaction_id": 1,
+        "anomaly_score": 0.6699795310314525,
+        "risk_score_baseline": 0.012655341066420078,
+        "top_features": [
+            "nameOrig_C1",
+            "nameDest_M1",
+            "step",
+            "type_TRANSFER",
+            "idx"
+        ],
+        "explanation": {
+            "nameOrig_C1": -0.5165654318034649,
+            "nameDest_M1": -0.22376789117231966,
+            "step": -0.17881934583187103,
+            "type_TRANSFER": -0.0875043583381921,
+            "idx": -0.052463351390324535
+        }
+    },
+    {
+        "transaction_id": 2,
+        "anomaly_score": 0.9349294255634578,
+        "risk_score_baseline": 0.4036352336406708,
+        "top_features": [
+            "nameOrig_C2",
+            "nameDest_M2",
+            "type_TRANSFER",
+            "idx",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C2": -0.8885439131781458,
+            "nameDest_M2": -0.7759895075764507,
+            "type_TRANSFER": -0.07953793743625283,
+            "idx": -0.07097987253684551,
+            "nameDest_M6": 0.04788647226989269
+        }
+    },
+    {
+        "transaction_id": 3,
+        "anomaly_score": 0.6294950420377216,
+        "risk_score_baseline": 0.021413717418909073,
+        "top_features": [
+            "nameOrig_C3",
+            "nameDest_M3",
+            "nameDest_M6",
+            "idx",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C3": -0.5600542905181647,
+            "nameDest_M3": -0.2714558934047818,
+            "nameDest_M6": 0.050931048188358544,
+            "idx": -0.04808392870239914,
+            "nameDest_M2": 0.04308858770877123
+        }
+    },
+    {
+        "transaction_id": 4,
+        "anomaly_score": 0.753514727722075,
+        "risk_score_baseline": 0.10236382484436035,
+        "top_features": [
+            "nameOrig_C4",
+            "nameDest_M4",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "idx"
+        ],
+        "explanation": {
+            "nameOrig_C4": -0.6899274407885969,
+            "nameDest_M4": -0.5018990604393184,
+            "type_TRANSFER": -0.06776454726234078,
+            "nameDest_M6": 0.05185707397758961,
+            "idx": -0.05139522999990732
+        }
+    },
+    {
+        "transaction_id": 5,
+        "anomaly_score": 0.632592190386889,
+        "risk_score_baseline": 0.05147946625947952,
+        "top_features": [
+            "nameDest_M5",
+            "nameOrig_C5",
+            "type_TRANSFER",
+            "idx",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M5": -0.42945654585957527,
+            "nameOrig_C5": -0.3219699341710657,
+            "type_TRANSFER": -0.07014398552477359,
+            "idx": -0.057853956832550464,
+            "nameDest_M6": 0.049582622218877076
+        }
+    },
+    {
+        "transaction_id": 6,
+        "anomaly_score": 0.8971368832675441,
+        "risk_score_baseline": 0.027623571455478668,
+        "top_features": [
+            "nameOrig_C6",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2",
+            "amount"
+        ],
+        "explanation": {
+            "nameOrig_C6": -1.0458656379953026,
+            "nameDest_M6": -0.8896756928134709,
+            "type_TRANSFER": -0.04313120439648628,
+            "nameDest_M2": 0.038873961362987756,
+            "amount": 0.03767921469639987
+        }
+    },
+    {
+        "transaction_id": 7,
+        "anomaly_score": 0.7439578318536211,
+        "risk_score_baseline": 0.39164644479751587,
+        "top_features": [
+            "nameOrig_C7",
+            "nameDest_M7",
+            "idx",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameOrig_C7": -0.5170615032315254,
+            "nameDest_M7": -0.4209519569203258,
+            "idx": -0.06362869672477245,
+            "nameDest_M6": 0.05171084417030215,
+            "type_TRANSFER": 0.04929056352935732
+        }
+    },
+    {
+        "transaction_id": 8,
+        "anomaly_score": 0.6039555504384215,
+        "risk_score_baseline": 0.0018536309944465756,
+        "top_features": [
+            "nameDest_M8",
+            "nameOrig_C8",
+            "idx",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M8": -0.48503392800688744,
+            "nameOrig_C8": -0.22011510325595737,
+            "idx": -0.04810102533083409,
+            "nameDest_M6": 0.0465911877155304,
+            "type_TRANSFER": -0.044243745161220434
+        }
+    },
+    {
+        "transaction_id": 9,
+        "anomaly_score": 0.5968320928910827,
+        "risk_score_baseline": 0.0558096244931221,
+        "top_features": [
+            "nameDest_M9",
+            "nameOrig_C9",
+            "idx",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M9": -0.3516234316537157,
+            "nameOrig_C9": -0.21244949671439828,
+            "idx": -0.061499466015957294,
+            "nameDest_M6": 0.050363836316391825,
+            "nameDest_M2": 0.04289076963439584
+        }
+    },
+    {
+        "transaction_id": 10,
+        "anomaly_score": 0.8886355480440836,
+        "risk_score_baseline": 0.39164644479751587,
+        "top_features": [
+            "nameDest_M10",
+            "nameOrig_C10",
+            "step",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M10": -0.7476753381825983,
+            "nameOrig_C10": -0.7429997188970446,
+            "step": -0.07899435291066766,
+            "type_TRANSFER": 0.054685816103592515,
+            "nameDest_M6": 0.05006896365433931
+        }
+    },
+    {
+        "transaction_id": 11,
+        "anomaly_score": 0.921831339566073,
+        "risk_score_baseline": 0.9285668730735779,
+        "top_features": [
+            "nameOrig_C11",
+            "nameDest_M11",
+            "idx",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C11": -0.6979803222045302,
+            "nameDest_M11": -0.5179225565120578,
+            "idx": -0.0606521475315094,
+            "nameDest_M6": 0.04933351516723633,
+            "nameDest_M2": 0.043180410750210285
+        }
+    },
+    {
+        "transaction_id": 12,
+        "anomaly_score": 0.860015990831623,
+        "risk_score_baseline": 0.9146614670753479,
+        "top_features": [
+            "nameDest_M12",
+            "nameOrig_C12",
+            "idx",
+            "nameDest_M6",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameDest_M12": -0.6925990521721542,
+            "nameOrig_C12": -0.18393467675894498,
+            "idx": -0.05923648335970938,
+            "nameDest_M6": 0.05184286966919899,
+            "type_PAYMENT": -0.05006000224500894
+        }
+    },
+    {
+        "transaction_id": 13,
+        "anomaly_score": 0.6926700337433771,
+        "risk_score_baseline": 0.08618012815713882,
+        "top_features": [
+            "nameDest_M13",
+            "nameOrig_C13",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M13": -0.7307721100468189,
+            "nameOrig_C13": -0.3263278114236891,
+            "type_TRANSFER": -0.06672916613519192,
+            "nameDest_M6": 0.04771752838045359,
+            "nameDest_M2": 0.04314048087224364
+        }
+    },
+    {
+        "transaction_id": 14,
+        "anomaly_score": 0.6833133484316214,
+        "risk_score_baseline": 0.04581766948103905,
+        "top_features": [
+            "nameOrig_C14",
+            "nameDest_M14",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameOrig_C14": -0.8313195616751909,
+            "nameDest_M14": -0.2696061065699905,
+            "nameDest_M6": 0.05122934502549469,
+            "nameDest_M2": 0.04504663828760386,
+            "type_TRANSFER": 0.04347131215967238
+        }
+    },
+    {
+        "transaction_id": 15,
+        "anomaly_score": 0.9096621944717849,
+        "risk_score_baseline": 0.9282982349395752,
+        "top_features": [
+            "nameOrig_C15",
+            "nameDest_M15",
+            "amount",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C15": -0.7613051340728998,
+            "nameDest_M15": -0.3242978173866868,
+            "amount": -0.12097657985985279,
+            "nameDest_M6": 0.04763738177716732,
+            "nameDest_M2": 0.04374710913747549
+        }
+    },
+    {
+        "transaction_id": 16,
+        "anomaly_score": 0.7749467717158472,
+        "risk_score_baseline": 0.02968548610806465,
+        "top_features": [
+            "nameOrig_C16",
+            "nameDest_M16",
+            "step",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C16": -0.8462972033396363,
+            "nameDest_M16": -0.4940798990800977,
+            "step": -0.08120004331693054,
+            "type_TRANSFER": -0.06013619248755276,
+            "nameDest_M6": 0.05351736720651388
+        }
+    },
+    {
+        "transaction_id": 17,
+        "anomaly_score": 0.8576457968939784,
+        "risk_score_baseline": 0.9622592926025391,
+        "top_features": [
+            "nameDest_M17",
+            "nameOrig_C17",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M17": -0.5067489859461785,
+            "nameOrig_C17": -0.4902636078000069,
+            "nameDest_M6": 0.05041258690878749,
+            "nameDest_M2": 0.045459524802863596,
+            "nameDest_M10": 0.03789342916570604
+        }
+    },
+    {
+        "transaction_id": 18,
+        "anomaly_score": 1.0,
+        "risk_score_baseline": 0.8780376315116882,
+        "top_features": [
+            "nameOrig_C18",
+            "nameDest_M18",
+            "type_TRANSFER",
+            "amount",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C18": -0.8442274789139629,
+            "nameDest_M18": -0.5934877525269985,
+            "type_TRANSFER": -0.10286480530165136,
+            "amount": -0.09848206317052245,
+            "nameDest_M6": 0.04810056235641241
+        }
+    },
+    {
+        "transaction_id": 19,
+        "anomaly_score": 0.6809467115144113,
+        "risk_score_baseline": 0.013612260110676289,
+        "top_features": [
+            "nameDest_M19",
+            "nameOrig_C19",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M19": -0.6377671557851136,
+            "nameOrig_C19": -0.4861061156913638,
+            "nameDest_M6": 0.051184859685599805,
+            "type_TRANSFER": 0.04485799459740519,
+            "nameDest_M2": 0.04384048098698259
+        }
+    },
+    {
+        "transaction_id": 20,
+        "anomaly_score": 0.5794252403223848,
+        "risk_score_baseline": 0.21940858662128448,
+        "top_features": [
+            "nameOrig_C20",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameOrig_C20": -0.5942096349224448,
+            "nameDest_M6": 0.050490969652310015,
+            "type_TRANSFER": 0.046599764646962284,
+            "nameDest_M2": 0.04350999590009451,
+            "nameDest_M13": 0.03843844195827842
+        }
+    },
+    {
+        "transaction_id": 21,
+        "anomaly_score": 0.6246244461698628,
+        "risk_score_baseline": 0.02242489717900753,
+        "top_features": [
+            "nameOrig_C21",
+            "nameDest_M1",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C21": -0.6853753267414868,
+            "nameDest_M1": -0.2275534337759018,
+            "nameDest_M6": 0.05065216624177992,
+            "nameDest_M2": 0.04142123150639236,
+            "nameDest_M10": 0.03985417287796736
+        }
+    },
+    {
+        "transaction_id": 22,
+        "anomaly_score": 0.7787429221962423,
+        "risk_score_baseline": 0.11579640209674835,
+        "top_features": [
+            "nameDest_M2",
+            "nameOrig_C22",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameDest_M2": -0.7675832984596491,
+            "nameOrig_C22": -0.5937065979838372,
+            "type_TRANSFER": -0.05951923684217036,
+            "nameDest_M6": 0.04664788622409105,
+            "nameDest_M13": 0.038940898850560186
+        }
+    },
+    {
+        "transaction_id": 23,
+        "anomaly_score": 0.5510076307790565,
+        "risk_score_baseline": 0.12125077843666077,
+        "top_features": [
+            "nameDest_M3",
+            "nameOrig_C23",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M3": -0.2628359012119472,
+            "nameOrig_C23": -0.1916053892672062,
+            "nameDest_M6": 0.05393308568745851,
+            "nameDest_M2": 0.04375147443264723,
+            "nameDest_M10": 0.03934274036437273
+        }
+    },
+    {
+        "transaction_id": 24,
+        "anomaly_score": 0.6650744788561527,
+        "risk_score_baseline": 0.05285003036260605,
+        "top_features": [
+            "nameDest_M4",
+            "nameOrig_C24",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M4": -0.49329159487970176,
+            "nameOrig_C24": -0.3976312260888517,
+            "type_TRANSFER": -0.06783121392130852,
+            "nameDest_M6": 0.05009080201387405,
+            "nameDest_M2": 0.041175806093961
+        }
+    },
+    {
+        "transaction_id": 25,
+        "anomaly_score": 0.6558797586322226,
+        "risk_score_baseline": 0.02621963620185852,
+        "top_features": [
+            "nameOrig_C25",
+            "nameDest_M5",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C25": -0.6425317508727312,
+            "nameDest_M5": -0.4170982091128826,
+            "nameDest_M6": 0.05030971925705671,
+            "type_TRANSFER": 0.044055493688210844,
+            "nameDest_M2": 0.043390481118112806
+        }
+    },
+    {
+        "transaction_id": 26,
+        "anomaly_score": 0.9117933487812437,
+        "risk_score_baseline": 0.7109737396240234,
+        "top_features": [
+            "nameDest_M6",
+            "nameOrig_C26",
+            "type_TRANSFER",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M6": -0.9522759685851634,
+            "nameOrig_C26": -0.4139462768472731,
+            "type_TRANSFER": -0.042903934065252544,
+            "nameDest_M2": 0.03969186006113887,
+            "nameDest_M10": 0.036933368407189845
+        }
+    },
+    {
+        "transaction_id": 27,
+        "anomaly_score": 0.7412084019630695,
+        "risk_score_baseline": 0.24807780981063843,
+        "top_features": [
+            "nameOrig_C27",
+            "nameDest_M7",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "step"
+        ],
+        "explanation": {
+            "nameOrig_C27": -0.763286264706403,
+            "nameDest_M7": -0.38781480472534896,
+            "nameDest_M6": 0.04978412987664342,
+            "type_TRANSFER": 0.04917389686219394,
+            "step": -0.0458609560970217
+        }
+    },
+    {
+        "transaction_id": 28,
+        "anomaly_score": 0.6986937048505425,
+        "risk_score_baseline": 0.29498952627182007,
+        "top_features": [
+            "nameDest_M8",
+            "nameOrig_C28",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameDest_M8": -0.49957980193197726,
+            "nameOrig_C28": -0.3817277143150568,
+            "nameDest_M6": 0.049100872911512855,
+            "nameDest_M2": 0.045046638213098046,
+            "nameDest_M13": 0.038858565408736466
+        }
+    },
+    {
+        "transaction_id": 29,
+        "anomaly_score": 0.6809431424163445,
+        "risk_score_baseline": 0.05285003036260605,
+        "top_features": [
+            "nameOrig_C29",
+            "nameDest_M9",
+            "step",
+            "nameDest_M6",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C29": -0.6466725065186619,
+            "nameDest_M9": -0.3650697460444644,
+            "step": -0.07027187710627913,
+            "nameDest_M6": 0.051930370284244416,
+            "nameDest_M10": 0.04198362357914448
+        }
+    },
+    {
+        "transaction_id": 30,
+        "anomaly_score": 0.6937044595143389,
+        "risk_score_baseline": 0.0016369505319744349,
+        "top_features": [
+            "nameDest_M10",
+            "nameOrig_C30",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M10": -0.707012876290828,
+            "nameOrig_C30": -0.4447149647586048,
+            "type_TRANSFER": -0.06395086464937777,
+            "nameDest_M6": 0.04856933418661356,
+            "nameDest_M2": 0.04099343279376626
+        }
+    },
+    {
+        "transaction_id": 31,
+        "anomaly_score": 0.8854546849733179,
+        "risk_score_baseline": 0.8995144367218018,
+        "top_features": [
+            "nameOrig_C31",
+            "nameDest_M11",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C31": -0.6370260811410844,
+            "nameDest_M11": -0.49888339452445507,
+            "nameDest_M6": 0.05135023629292846,
+            "nameDest_M2": 0.04545952472835779,
+            "nameDest_M10": 0.03934274036437273
+        }
+    },
+    {
+        "transaction_id": 32,
+        "anomaly_score": 0.7417097266876772,
+        "risk_score_baseline": 0.0020192693918943405,
+        "top_features": [
+            "nameDest_M12",
+            "nameOrig_C32",
+            "step",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M12": -0.6712602257728577,
+            "nameOrig_C32": -0.648322511035949,
+            "step": -0.07854399454779923,
+            "nameDest_M6": 0.05210383433848619,
+            "type_TRANSFER": 0.04628486195579171
+        }
+    },
+    {
+        "transaction_id": 33,
+        "anomaly_score": 0.7438925358889915,
+        "risk_score_baseline": 0.0027709261048585176,
+        "top_features": [
+            "nameDest_M13",
+            "nameOrig_C33",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameDest_M13": -0.7185218503233045,
+            "nameOrig_C33": -0.6994092490896583,
+            "type_TRANSFER": 0.05415691616013646,
+            "nameDest_M6": 0.04663573233410716,
+            "type_PAYMENT": -0.04089788321405649
+        }
+    },
+    {
+        "transaction_id": 34,
+        "anomaly_score": 0.6455607781949563,
+        "risk_score_baseline": 0.004696865100413561,
+        "top_features": [
+            "nameOrig_C34",
+            "nameDest_M14",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameOrig_C34": -0.6440372854098677,
+            "nameDest_M14": -0.2695811065938324,
+            "nameDest_M6": 0.05251726020127535,
+            "nameDest_M2": 0.04504663828760386,
+            "type_PAYMENT": -0.04137078817933798
+        }
+    },
+    {
+        "transaction_id": 35,
+        "anomaly_score": 0.6164108096646479,
+        "risk_score_baseline": 0.005214807111769915,
+        "top_features": [
+            "nameOrig_C35",
+            "nameDest_M15",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C35": -0.4495533712208271,
+            "nameDest_M15": -0.3212450683116913,
+            "type_TRANSFER": -0.08554644980467856,
+            "nameDest_M6": 0.0515493868291378,
+            "nameDest_M2": 0.04122151993215084
+        }
+    },
+    {
+        "transaction_id": 36,
+        "anomaly_score": 0.5913997080893257,
+        "risk_score_baseline": 0.0008871699101291597,
+        "top_features": [
+            "nameDest_M16",
+            "nameOrig_C36",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M16": -0.49239716321229937,
+            "nameOrig_C36": -0.27374764908105137,
+            "nameDest_M6": 0.052774409539997576,
+            "nameDest_M2": 0.043328864052891734,
+            "type_TRANSFER": 0.04093723398633301
+        }
+    },
+    {
+        "transaction_id": 37,
+        "anomaly_score": 0.7593557754044331,
+        "risk_score_baseline": 0.05991102755069733,
+        "top_features": [
+            "nameOrig_C37",
+            "nameDest_M17",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C37": -0.8078870498389006,
+            "nameDest_M17": -0.5703356227185578,
+            "nameDest_M6": 0.04896702544763684,
+            "type_TRANSFER": -0.04597868476994336,
+            "nameDest_M2": 0.04269048104062676
+        }
+    },
+    {
+        "transaction_id": 38,
+        "anomaly_score": 0.6587489577753152,
+        "risk_score_baseline": 0.09465841203927994,
+        "top_features": [
+            "nameDest_M18",
+            "nameOrig_C38",
+            "amount",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M18": -0.5507576851826161,
+            "nameOrig_C38": -0.29450105093419554,
+            "amount": -0.11269739150069653,
+            "nameDest_M6": 0.05263678248971701,
+            "type_TRANSFER": 0.04515785863623023
+        }
+    },
+    {
+        "transaction_id": 39,
+        "anomaly_score": 0.6251332623447271,
+        "risk_score_baseline": 0.00239872676320374,
+        "top_features": [
+            "nameDest_M19",
+            "nameOrig_C39",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M19": -0.5774068859685212,
+            "nameOrig_C39": -0.37109220899641515,
+            "nameDest_M6": 0.05509539362043142,
+            "type_TRANSFER": 0.05211080321110785,
+            "nameDest_M2": 0.04334076972678304
+        }
+    },
+    {
+        "transaction_id": 40,
+        "anomaly_score": 0.5902399103599127,
+        "risk_score_baseline": 0.007155196741223335,
+        "top_features": [
+            "nameOrig_C40",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M13",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameOrig_C40": -0.913789505455643,
+            "nameDest_M6": 0.052359825130552054,
+            "nameDest_M2": 0.04224962640553713,
+            "nameDest_M13": 0.039417183008044955,
+            "type_TRANSFER": 0.038041869336739184
+        }
+    },
+    {
+        "transaction_id": 41,
+        "anomaly_score": 0.6445602194169142,
+        "risk_score_baseline": 0.11516624689102173,
+        "top_features": [
+            "nameOrig_C41",
+            "nameDest_M1",
+            "amount",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C41": -0.4431804566644132,
+            "nameDest_M1": -0.2398974258080125,
+            "amount": -0.13216741500422358,
+            "type_TRANSFER": -0.06521976451389491,
+            "nameDest_M6": 0.04919097600504756
+        }
+    },
+    {
+        "transaction_id": 42,
+        "anomaly_score": 0.8133648522612816,
+        "risk_score_baseline": 0.000827494659461081,
+        "top_features": [
+            "nameOrig_C42",
+            "nameDest_M2",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C42": -0.898930845418945,
+            "nameDest_M2": -0.7978798302821815,
+            "nameDest_M6": 0.04832556251436472,
+            "type_TRANSFER": -0.03688022866845131,
+            "nameDest_M10": 0.03633602131158113
+        }
+    },
+    {
+        "transaction_id": 43,
+        "anomaly_score": 0.6433106818131317,
+        "risk_score_baseline": 0.022616837173700333,
+        "top_features": [
+            "nameOrig_C43",
+            "nameDest_M3",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C43": -0.721666418556124,
+            "nameDest_M3": -0.29166552174836397,
+            "nameDest_M6": 0.053105856962502,
+            "nameDest_M2": 0.04193119863048196,
+            "nameDest_M10": 0.03986682690680027
+        }
+    },
+    {
+        "transaction_id": 44,
+        "anomaly_score": 0.577505560555236,
+        "risk_score_baseline": 0.005423747468739748,
+        "top_features": [
+            "nameDest_M4",
+            "nameOrig_C44",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M4": -0.4866131722647697,
+            "nameOrig_C44": -0.2187414376810193,
+            "nameDest_M6": 0.05578398685902357,
+            "type_TRANSFER": 0.054745864002034066,
+            "nameDest_M2": 0.045009524933993815
+        }
+    },
+    {
+        "transaction_id": 45,
+        "anomaly_score": 0.7920734415433662,
+        "risk_score_baseline": 0.012496300041675568,
+        "top_features": [
+            "nameOrig_C45",
+            "nameDest_M5",
+            "type_PAYMENT",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C45": -1.0543494779244065,
+            "nameDest_M5": -0.43198362469673157,
+            "type_PAYMENT": -0.06265354193747044,
+            "nameDest_M6": 0.05149842627346515,
+            "nameDest_M2": 0.04325541075319052
+        }
+    },
+    {
+        "transaction_id": 46,
+        "anomaly_score": 0.8105805800775782,
+        "risk_score_baseline": 0.005214807111769915,
+        "top_features": [
+            "nameDest_M6",
+            "nameOrig_C46",
+            "type_TRANSFER",
+            "nameDest_M2",
+            "nameDest_M12"
+        ],
+        "explanation": {
+            "nameDest_M6": -0.986630848441273,
+            "nameOrig_C46": -0.6957495436351746,
+            "type_TRANSFER": 0.04343439526855945,
+            "nameDest_M2": 0.040029905596747996,
+            "nameDest_M12": 0.03762604327872396
+        }
+    },
+    {
+        "transaction_id": 47,
+        "anomaly_score": 0.6829121952183553,
+        "risk_score_baseline": 0.0003732797922566533,
+        "top_features": [
+            "nameOrig_C47",
+            "nameDest_M7",
+            "nameDest_M6",
+            "nameDest_M2",
+            "idx"
+        ],
+        "explanation": {
+            "nameOrig_C47": -0.7985675909742713,
+            "nameDest_M7": -0.40029687225818633,
+            "nameDest_M6": 0.05278010854497552,
+            "nameDest_M2": 0.04501330491155386,
+            "idx": 0.03873577629216016
+        }
+    },
+    {
+        "transaction_id": 48,
+        "anomaly_score": 0.6409373344278947,
+        "risk_score_baseline": 0.009164754301309586,
+        "top_features": [
+            "nameDest_M8",
+            "nameOrig_C48",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameDest_M8": -0.4931140039116144,
+            "nameOrig_C48": -0.45810395758599043,
+            "nameDest_M6": 0.05050177399069071,
+            "type_TRANSFER": 0.04928891678340733,
+            "type_PAYMENT": -0.04551111844368279
+        }
+    },
+    {
+        "transaction_id": 49,
+        "anomaly_score": 0.6788989422261978,
+        "risk_score_baseline": 0.012496300041675568,
+        "top_features": [
+            "nameOrig_C49",
+            "nameDest_M9",
+            "nameDest_M6",
+            "idx",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C49": -0.7581727871857583,
+            "nameDest_M9": -0.3378451983863488,
+            "nameDest_M6": 0.05143715972080827,
+            "idx": 0.045421429006382824,
+            "nameDest_M2": 0.04314048087224364
+        }
+    },
+    {
+        "transaction_id": 50,
+        "anomaly_score": 0.7872607403736951,
+        "risk_score_baseline": 0.0005539030535146594,
+        "top_features": [
+            "nameOrig_C50",
+            "nameDest_M10",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameOrig_C50": -0.8629738712403924,
+            "nameDest_M10": -0.6932909247651696,
+            "nameDest_M6": 0.050947974361479284,
+            "nameDest_M2": 0.04183117050677538,
+            "nameDest_M13": 0.040650756303220986
+        }
+    },
+    {
+        "transaction_id": 51,
+        "anomaly_score": 0.6359928162566125,
+        "risk_score_baseline": 0.004696865100413561,
+        "top_features": [
+            "nameDest_M11",
+            "nameOrig_C51",
+            "step",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M11": -0.5192142215371132,
+            "nameOrig_C51": -0.3372098322864622,
+            "step": -0.054244021559134124,
+            "nameDest_M6": 0.05077169742435217,
+            "type_TRANSFER": 0.04604479724541306
+        }
+    },
+    {
+        "transaction_id": 52,
+        "anomaly_score": 0.6191977932442193,
+        "risk_score_baseline": 0.00703473063185811,
+        "top_features": [
+            "nameDest_M12",
+            "nameOrig_C52",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M12": -0.6608441646024584,
+            "nameOrig_C52": -0.2162146719917655,
+            "nameDest_M6": 0.054824934415519236,
+            "nameDest_M2": 0.043590769711881874,
+            "nameDest_M10": 0.04063856340944767
+        }
+    },
+    {
+        "transaction_id": 53,
+        "anomaly_score": 0.6410203138205542,
+        "risk_score_baseline": 0.005214807111769915,
+        "top_features": [
+            "nameDest_M13",
+            "nameOrig_C53",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M13": -0.6712179747410119,
+            "nameOrig_C53": -0.3458239139523357,
+            "type_TRANSFER": 0.06198217777535319,
+            "nameDest_M6": 0.05037110678851604,
+            "nameDest_M2": 0.042007875684648754
+        }
+    },
+    {
+        "transaction_id": 54,
+        "anomaly_score": 0.6602551171775004,
+        "risk_score_baseline": 0.00043746241135522723,
+        "top_features": [
+            "nameOrig_C54",
+            "nameDest_M14",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameOrig_C54": -0.7279990365356207,
+            "nameDest_M14": -0.2848115860391408,
+            "type_TRANSFER": -0.08276862696744501,
+            "nameDest_M6": 0.05162391398102045,
+            "nameDest_M13": 0.039341951943933966
+        }
+    },
+    {
+        "transaction_id": 55,
+        "anomaly_score": 0.6072514350997957,
+        "risk_score_baseline": 0.0029302642215043306,
+        "top_features": [
+            "nameOrig_C55",
+            "nameDest_M15",
+            "type_TRANSFER",
+            "step",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C55": -0.42032142927870153,
+            "nameDest_M15": -0.3461098915711045,
+            "type_TRANSFER": 0.060012689335271714,
+            "step": -0.054165394753217695,
+            "nameDest_M6": 0.05355069000273943
+        }
+    },
+    {
+        "transaction_id": 56,
+        "anomaly_score": 0.7049624825814605,
+        "risk_score_baseline": 0.007155196741223335,
+        "top_features": [
+            "nameOrig_C56",
+            "nameDest_M16",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C56": -0.7576950291916728,
+            "nameDest_M16": -0.5018466736748814,
+            "nameDest_M6": 0.04970062194392085,
+            "type_TRANSFER": 0.049420042699202894,
+            "nameDest_M2": 0.04357508398592472
+        }
+    },
+    {
+        "transaction_id": 57,
+        "anomaly_score": 0.7138741408860952,
+        "risk_score_baseline": 0.002051795832812786,
+        "top_features": [
+            "nameOrig_C57",
+            "nameDest_M17",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C57": -0.7581018587201833,
+            "nameDest_M17": -0.5216679636575282,
+            "nameDest_M6": 0.05104524939320981,
+            "type_TRANSFER": 0.047475987151265144,
+            "nameDest_M2": 0.04431422680616379
+        }
+    },
+    {
+        "transaction_id": 58,
+        "anomaly_score": 0.6104506742620132,
+        "risk_score_baseline": 0.000827494659461081,
+        "top_features": [
+            "nameDest_M18",
+            "nameOrig_C58",
+            "type_TRANSFER",
+            "step",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M18": -0.5427649386413396,
+            "nameOrig_C58": -0.16212415421381593,
+            "type_TRANSFER": -0.066880367603153,
+            "step": -0.06581463352777064,
+            "nameDest_M6": 0.05124795164912939
+        }
+    },
+    {
+        "transaction_id": 59,
+        "anomaly_score": 0.7516300099626821,
+        "risk_score_baseline": 0.0014281790936365724,
+        "top_features": [
+            "nameDest_M19",
+            "nameOrig_C59",
+            "step",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M19": -0.6137558503355831,
+            "nameOrig_C59": -0.5993117340467871,
+            "step": -0.14429383049719036,
+            "type_TRANSFER": -0.09169783346354961,
+            "nameDest_M6": 0.046984941577538845
+        }
+    },
+    {
+        "transaction_id": 60,
+        "anomaly_score": 0.4745349986903733,
+        "risk_score_baseline": 0.05991102755069733,
+        "top_features": [
+            "nameOrig_C60",
+            "nameDest_M6",
+            "nameDest_M10",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameOrig_C60": -0.314410545732826,
+            "nameDest_M6": 0.05332252372056246,
+            "nameDest_M10": 0.03986682690680027,
+            "nameDest_M2": 0.039188337493687865,
+            "nameDest_M13": 0.03865410916507244
+        }
+    },
+    {
+        "transaction_id": 61,
+        "anomaly_score": 0.6245445659412812,
+        "risk_score_baseline": 0.0030576407443732023,
+        "top_features": [
+            "nameOrig_C61",
+            "nameDest_M1",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C61": -0.6155339387431741,
+            "nameDest_M1": -0.20656243262812496,
+            "type_TRANSFER": -0.07873914618045091,
+            "nameDest_M6": 0.050056804846972225,
+            "nameDest_M2": 0.042924102935940026
+        }
+    },
+    {
+        "transaction_id": 62,
+        "anomaly_score": 0.7728835274362921,
+        "risk_score_baseline": 0.007854833267629147,
+        "top_features": [
+            "nameDest_M2",
+            "nameOrig_C62",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameDest_M2": -0.8314659197162837,
+            "nameOrig_C62": -0.6856311840005219,
+            "nameDest_M6": 0.05067170281894505,
+            "type_TRANSFER": 0.041106371404603124,
+            "nameDest_M13": 0.039417183008044955
+        }
+    },
+    {
+        "transaction_id": 63,
+        "anomaly_score": 0.5764930132050885,
+        "risk_score_baseline": 0.004998014308512211,
+        "top_features": [
+            "nameOrig_C63",
+            "nameDest_M3",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C63": -0.36025057107210157,
+            "nameDest_M3": -0.2763608942180872,
+            "nameDest_M6": 0.05600065361708403,
+            "nameDest_M2": 0.041293580271303656,
+            "nameDest_M10": 0.039355394393205644
+        }
+    },
+    {
+        "transaction_id": 64,
+        "anomaly_score": 0.7073466762615556,
+        "risk_score_baseline": 0.00047491065924987197,
+        "top_features": [
+            "nameOrig_C64",
+            "nameDest_M4",
+            "nameDest_M6",
+            "amount",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C64": -0.7875504840165377,
+            "nameDest_M4": -0.4752237755339593,
+            "nameDest_M6": 0.05344919111579657,
+            "amount": 0.044432753315195445,
+            "nameDest_M2": 0.042640481013804674
+        }
+    },
+    {
+        "transaction_id": 65,
+        "anomaly_score": 0.6186497026949602,
+        "risk_score_baseline": 0.0007145729614421725,
+        "top_features": [
+            "nameOrig_C65",
+            "nameDest_M5",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameOrig_C65": -0.44811218651011586,
+            "nameDest_M5": -0.42668362241238356,
+            "nameDest_M6": 0.05096993820741773,
+            "nameDest_M2": 0.04544663805514574,
+            "type_TRANSFER": 0.04326110927388072
+        }
+    },
+    {
+        "transaction_id": 66,
+        "anomaly_score": 0.7734938346323759,
+        "risk_score_baseline": 0.003868803149089217,
+        "top_features": [
+            "nameDest_M6",
+            "nameOrig_C66",
+            "nameDest_M2",
+            "nameDest_M12",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M6": -0.962490372499451,
+            "nameOrig_C66": -0.4992980957962573,
+            "nameDest_M2": 0.04160938326269388,
+            "nameDest_M12": 0.03720951441675425,
+            "nameDest_M10": 0.036743072494864464
+        }
+    },
+    {
+        "transaction_id": 67,
+        "anomaly_score": 0.7719459983120742,
+        "risk_score_baseline": 0.0030576407443732023,
+        "top_features": [
+            "nameOrig_C67",
+            "nameDest_M7",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C67": -0.9428072270937264,
+            "nameDest_M7": -0.44495633760467174,
+            "type_TRANSFER": -0.055261926613748076,
+            "nameDest_M6": 0.048038898482918736,
+            "nameDest_M2": 0.04093830870464444
+        }
+    },
+    {
+        "transaction_id": 68,
+        "anomaly_score": 0.7082362140628453,
+        "risk_score_baseline": 0.0067183771170675755,
+        "top_features": [
+            "nameOrig_C68",
+            "nameDest_M8",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C68": -0.6662393930181861,
+            "nameDest_M8": -0.4842118463665247,
+            "type_TRANSFER": -0.07291336719878018,
+            "nameDest_M6": 0.0477625831682235,
+            "nameDest_M2": 0.03895529266446829
+        }
+    },
+    {
+        "transaction_id": 69,
+        "anomaly_score": 0.5704620814087037,
+        "risk_score_baseline": 0.007155196741223335,
+        "top_features": [
+            "nameDest_M9",
+            "nameOrig_C69",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameDest_M9": -0.35331041682977227,
+            "nameOrig_C69": -0.307638855278492,
+            "nameDest_M6": 0.05418068415485323,
+            "nameDest_M2": 0.045292858146131036,
+            "nameDest_M13": 0.039417183008044955
+        }
+    },
+    {
+        "transaction_id": 70,
+        "anomaly_score": 0.7783638362573175,
+        "risk_score_baseline": 0.004998014308512211,
+        "top_features": [
+            "nameOrig_C70",
+            "nameDest_M10",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C70": -0.7760977276042104,
+            "nameDest_M10": -0.7253278088569641,
+            "type_TRANSFER": 0.049328731894493105,
+            "nameDest_M6": 0.04895551240071654,
+            "nameDest_M2": 0.043745508007705214
+        }
+    },
+    {
+        "transaction_id": 71,
+        "anomaly_score": 0.7617245821546486,
+        "risk_score_baseline": 0.016787433996796608,
+        "top_features": [
+            "nameOrig_C71",
+            "nameDest_M11",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameOrig_C71": -0.8538157437928021,
+            "nameDest_M11": -0.513147549815476,
+            "nameDest_M6": 0.04735685799270868,
+            "nameDest_M2": 0.043163744024932386,
+            "type_PAYMENT": -0.042311943136155605
+        }
+    },
+    {
+        "transaction_id": 72,
+        "anomaly_score": 0.7845480374621814,
+        "risk_score_baseline": 0.013555771671235561,
+        "top_features": [
+            "nameOrig_C72",
+            "nameDest_M12",
+            "nameDest_M6",
+            "nameDest_M2",
+            "type_PAYMENT"
+        ],
+        "explanation": {
+            "nameOrig_C72": -0.9365429794602096,
+            "nameDest_M12": -0.61316883825697,
+            "nameDest_M6": 0.04684246610850096,
+            "nameDest_M2": 0.04014930525794625,
+            "type_PAYMENT": 0.036409480860456825
+        }
+    },
+    {
+        "transaction_id": 73,
+        "anomaly_score": 0.747835603512722,
+        "risk_score_baseline": 0.009173206053674221,
+        "top_features": [
+            "nameOrig_C73",
+            "nameDest_M13",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C73": -0.7353079200349748,
+            "nameDest_M13": -0.7051042680256069,
+            "type_TRANSFER": 0.0680181803740561,
+            "nameDest_M6": 0.0490280232578516,
+            "nameDest_M2": 0.03860541449859738
+        }
+    },
+    {
+        "transaction_id": 74,
+        "anomaly_score": 0.6844207395035784,
+        "risk_score_baseline": 0.00207910081371665,
+        "top_features": [
+            "nameOrig_C74",
+            "nameDest_M14",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C74": -0.9120618982799351,
+            "nameDest_M14": -0.2806020910106599,
+            "type_TRANSFER": 0.05999875873327255,
+            "nameDest_M6": 0.052563938163220886,
+            "nameDest_M2": 0.0412912086583674
+        }
+    },
+    {
+        "transaction_id": 75,
+        "anomaly_score": 0.7578568245319629,
+        "risk_score_baseline": 0.649917483329773,
+        "top_features": [
+            "nameDest_M15",
+            "nameOrig_C75",
+            "amount",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M15": -0.3219968223851174,
+            "nameOrig_C75": -0.2997692488692701,
+            "amount": -0.13501367565244438,
+            "type_TRANSFER": -0.07359260308556259,
+            "nameDest_M6": 0.05112627446651459
+        }
+    },
+    {
+        "transaction_id": 76,
+        "anomaly_score": 0.6729648567424981,
+        "risk_score_baseline": 0.06199667975306511,
+        "top_features": [
+            "nameDest_M16",
+            "nameOrig_C76",
+            "step",
+            "nameDest_M6",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M16": -0.5054740656539798,
+            "nameOrig_C76": -0.3510486485995352,
+            "step": -0.1694346266333014,
+            "nameDest_M6": 0.051135804168879986,
+            "type_TRANSFER": 0.04492746538482607
+        }
+    },
+    {
+        "transaction_id": 77,
+        "anomaly_score": 0.72941437001486,
+        "risk_score_baseline": 0.006881501991301775,
+        "top_features": [
+            "nameDest_M17",
+            "nameOrig_C77",
+            "type_TRANSFER",
+            "idx",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M17": -0.6021295233815909,
+            "nameOrig_C77": -0.5204956780746579,
+            "type_TRANSFER": -0.12238874253816903,
+            "idx": -0.05908470683731139,
+            "nameDest_M6": 0.049825389543548225
+        }
+    },
+    {
+        "transaction_id": 78,
+        "anomaly_score": 0.8693889892476113,
+        "risk_score_baseline": 0.20598024129867554,
+        "top_features": [
+            "nameOrig_C78",
+            "nameDest_M18",
+            "amount",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C78": -0.8766259031929076,
+            "nameDest_M18": -0.5845152572542429,
+            "amount": -0.12948204673826694,
+            "type_TRANSFER": -0.09990162131376565,
+            "nameDest_M6": 0.050154590867459777
+        }
+    },
+    {
+        "transaction_id": 79,
+        "anomaly_score": 0.7899526103762466,
+        "risk_score_baseline": 0.06199667975306511,
+        "top_features": [
+            "nameOrig_C79",
+            "nameDest_M19",
+            "type_TRANSFER",
+            "step",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C79": -0.8866837846487761,
+            "nameDest_M19": -0.6033062290772796,
+            "type_TRANSFER": 0.056331143034622076,
+            "step": -0.05321097021922469,
+            "nameDest_M6": 0.046516814976930616
+        }
+    },
+    {
+        "transaction_id": 80,
+        "anomaly_score": 0.5435486223068131,
+        "risk_score_baseline": 0.012246863916516304,
+        "top_features": [
+            "nameOrig_C80",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10",
+            "nameDest_M12"
+        ],
+        "explanation": {
+            "nameOrig_C80": -0.7069588526338338,
+            "nameDest_M6": 0.0531939622014761,
+            "nameDest_M2": 0.043590769562870266,
+            "nameDest_M10": 0.038144436068832874,
+            "nameDest_M12": 0.03573826730251312
+        }
+    },
+    {
+        "transaction_id": 81,
+        "anomaly_score": 0.6772936231270791,
+        "risk_score_baseline": 0.016991648823022842,
+        "top_features": [
+            "nameOrig_C81",
+            "nameDest_M1",
+            "nameDest_M6",
+            "type_TRANSFER",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C81": -0.8799250584840774,
+            "nameDest_M1": -0.21787424612790346,
+            "nameDest_M6": 0.04911351927556098,
+            "type_TRANSFER": 0.04564831593073904,
+            "nameDest_M10": 0.04013856343924999
+        }
+    },
+    {
+        "transaction_id": 82,
+        "anomaly_score": 0.7127477472452765,
+        "risk_score_baseline": 0.00869824644178152,
+        "top_features": [
+            "nameDest_M2",
+            "nameOrig_C82",
+            "nameDest_M6",
+            "type_PAYMENT",
+            "type_TRANSFER"
+        ],
+        "explanation": {
+            "nameDest_M2": -0.8421850157156586,
+            "nameOrig_C82": -0.38337933968752624,
+            "nameDest_M6": 0.05251026544719935,
+            "type_PAYMENT": -0.049671051669865844,
+            "type_TRANSFER": 0.04885164850391448
+        }
+    },
+    {
+        "transaction_id": 83,
+        "anomaly_score": 0.69209820070581,
+        "risk_score_baseline": 0.6413958072662354,
+        "top_features": [
+            "nameOrig_C83",
+            "nameDest_M3",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C83": -0.2975682361610234,
+            "nameDest_M3": -0.2833684158883989,
+            "nameDest_M6": 0.05332252372056246,
+            "nameDest_M2": 0.04151453169062733,
+            "nameDest_M10": 0.03986682690680027
+        }
+    },
+    {
+        "transaction_id": 84,
+        "anomaly_score": 0.5738702290580415,
+        "risk_score_baseline": 0.016681425273418427,
+        "top_features": [
+            "nameDest_M4",
+            "nameOrig_C84",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M4": -0.466057693855837,
+            "nameOrig_C84": -0.13132786890491843,
+            "type_TRANSFER": 0.05970199006609619,
+            "nameDest_M6": 0.055550653524696826,
+            "nameDest_M2": 0.045492858104407785
+        }
+    },
+    {
+        "transaction_id": 85,
+        "anomaly_score": 0.7969732635882362,
+        "risk_score_baseline": 0.11695262789726257,
+        "top_features": [
+            "nameOrig_C85",
+            "nameDest_M5",
+            "step",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C85": -0.8139018216077238,
+            "nameDest_M5": -0.3832958342228085,
+            "step": -0.1741957866027951,
+            "type_TRANSFER": -0.10458371720276773,
+            "nameDest_M6": 0.05069795669987798
+        }
+    },
+    {
+        "transaction_id": 86,
+        "anomaly_score": 0.7559641671775497,
+        "risk_score_baseline": 0.009034599177539349,
+        "top_features": [
+            "nameDest_M6",
+            "nameOrig_C86",
+            "type_PAYMENT",
+            "type_TRANSFER",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M6": -1.040734747601673,
+            "nameOrig_C86": -0.34531050676479935,
+            "type_PAYMENT": -0.0482113039214164,
+            "type_TRANSFER": 0.04773479096591473,
+            "nameDest_M2": 0.039813602492213246
+        }
+    },
+    {
+        "transaction_id": 87,
+        "anomaly_score": 0.6934801924880708,
+        "risk_score_baseline": 0.013219543732702732,
+        "top_features": [
+            "nameOrig_C87",
+            "nameDest_M7",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C87": -0.720118560064584,
+            "nameDest_M7": -0.433015308380127,
+            "nameDest_M6": 0.05390921207144857,
+            "nameDest_M2": 0.04382410289719701,
+            "nameDest_M10": 0.03765866309404373
+        }
+    },
+    {
+        "transaction_id": 88,
+        "anomaly_score": 0.6086721009785551,
+        "risk_score_baseline": 0.006881501991301775,
+        "top_features": [
+            "nameDest_M8",
+            "nameOrig_C88",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M8": -0.5063286288641393,
+            "nameOrig_C88": -0.18868240788578988,
+            "type_TRANSFER": -0.0667097433656454,
+            "nameDest_M6": 0.04802385507151485,
+            "nameDest_M2": 0.04267410295084119
+        }
+    },
+    {
+        "transaction_id": 89,
+        "anomaly_score": 0.6543959005721371,
+        "risk_score_baseline": 0.009074071422219276,
+        "top_features": [
+            "nameOrig_C89",
+            "nameDest_M9",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameOrig_C89": -0.5982157190795988,
+            "nameDest_M9": -0.3037612362205982,
+            "type_TRANSFER": -0.07675339332781732,
+            "nameDest_M6": 0.05349415562115609,
+            "nameDest_M10": 0.04039554163813591
+        }
+    },
+    {
+        "transaction_id": 90,
+        "anomaly_score": 0.7628820578898059,
+        "risk_score_baseline": 0.006881501991301775,
+        "top_features": [
+            "nameDest_M10",
+            "nameOrig_C90",
+            "type_TRANSFER",
+            "step",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M10": -0.7455937379878015,
+            "nameOrig_C90": -0.46930077657103536,
+            "type_TRANSFER": -0.10590361648704856,
+            "step": -0.08679163647815585,
+            "nameDest_M6": 0.04836509570479393
+        }
+    },
+    {
+        "transaction_id": 91,
+        "anomaly_score": 0.7224541832638192,
+        "risk_score_baseline": 0.019123440608382225,
+        "top_features": [
+            "nameOrig_C91",
+            "nameDest_M11",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M13"
+        ],
+        "explanation": {
+            "nameOrig_C91": -0.7839252955652773,
+            "nameDest_M11": -0.47284404871985314,
+            "nameDest_M6": 0.053188423104584215,
+            "nameDest_M2": 0.0399286000803113,
+            "nameDest_M13": 0.03982795082032681
+        }
+    },
+    {
+        "transaction_id": 92,
+        "anomaly_score": 0.7925564850311726,
+        "risk_score_baseline": 0.41759607195854187,
+        "top_features": [
+            "nameDest_M12",
+            "nameOrig_C92",
+            "nameDest_M6",
+            "nameDest_M2",
+            "nameDest_M10"
+        ],
+        "explanation": {
+            "nameDest_M12": -0.6513927946053445,
+            "nameOrig_C92": -0.586118032541126,
+            "nameDest_M6": 0.05148296467959881,
+            "nameDest_M2": 0.04387975842691958,
+            "nameDest_M10": 0.03788103260099888
+        }
+    },
+    {
+        "transaction_id": 93,
+        "anomaly_score": 0.7151823023076898,
+        "risk_score_baseline": 0.004113147035241127,
+        "top_features": [
+            "nameDest_M13",
+            "nameOrig_C93",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M13": -0.6835508700273931,
+            "nameOrig_C93": -0.43242435304448007,
+            "type_TRANSFER": -0.11384465384297072,
+            "nameDest_M6": 0.04759569883346557,
+            "nameDest_M2": 0.04269048096612096
+        }
+    },
+    {
+        "transaction_id": 94,
+        "anomaly_score": 0.6367898414523417,
+        "risk_score_baseline": 0.004448407329618931,
+        "top_features": [
+            "nameOrig_C94",
+            "nameDest_M14",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C94": -0.5486551952548325,
+            "nameDest_M14": -0.29196349732577803,
+            "type_TRANSFER": -0.08855720059014857,
+            "nameDest_M6": 0.05173880960792303,
+            "nameDest_M2": 0.04289048099890351
+        }
+    },
+    {
+        "transaction_id": 95,
+        "anomaly_score": 0.6271943000335619,
+        "risk_score_baseline": 0.019638167694211006,
+        "top_features": [
+            "nameOrig_C95",
+            "nameDest_M15",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C95": -0.4905770473275334,
+            "nameDest_M15": -0.31602293844334783,
+            "type_TRANSFER": -0.05508513275533915,
+            "nameDest_M6": 0.05126589410007,
+            "nameDest_M2": 0.04289048099890351
+        }
+    },
+    {
+        "transaction_id": 96,
+        "anomaly_score": 0.7573733858346056,
+        "risk_score_baseline": 0.02106386423110962,
+        "top_features": [
+            "nameOrig_C96",
+            "nameDest_M16",
+            "nameDest_M6",
+            "idx",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameOrig_C96": -0.8817428757995367,
+            "nameDest_M16": -0.5098043935000897,
+            "nameDest_M6": 0.05597565364092588,
+            "idx": -0.046048105992376805,
+            "nameDest_M2": 0.04357508398592472
+        }
+    },
+    {
+        "transaction_id": 97,
+        "anomaly_score": 0.6356651887183786,
+        "risk_score_baseline": 0.009984677657485008,
+        "top_features": [
+            "nameDest_M17",
+            "nameOrig_C97",
+            "type_TRANSFER",
+            "nameDest_M6",
+            "nameDest_M2"
+        ],
+        "explanation": {
+            "nameDest_M17": -0.5457297636894509,
+            "nameOrig_C97": -0.35306786285713315,
+            "type_TRANSFER": 0.05570511907339096,
+            "nameDest_M6": 0.051123809423297646,
+            "nameDest_M2": 0.04348673965781927
+        }
+    },
+    {
+        "transaction_id": 98,
+        "anomaly_score": 0.6232543347089267,
+        "risk_score_baseline": 0.019930372014641762,
+        "top_features": [
+            "nameDest_M18",
+            "nameOrig_C98",
+            "idx",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameDest_M18": -0.584455931307748,
+            "nameOrig_C98": -0.20527748884633185,
+            "idx": -0.10373546347022057,
+            "type_TRANSFER": 0.06222167020663619,
+            "nameDest_M6": 0.052002970837056635
+        }
+    },
+    {
+        "transaction_id": 99,
+        "anomaly_score": 0.7893173025066942,
+        "risk_score_baseline": 0.006670315284281969,
+        "top_features": [
+            "nameOrig_C99",
+            "nameDest_M19",
+            "idx",
+            "type_TRANSFER",
+            "nameDest_M6"
+        ],
+        "explanation": {
+            "nameOrig_C99": -0.8842296370118856,
+            "nameDest_M19": -0.5292636863980442,
+            "idx": -0.09433829694055021,
+            "type_TRANSFER": 0.06209798286668956,
+            "nameDest_M6": 0.05149459891021252
+        }
+    }
+]

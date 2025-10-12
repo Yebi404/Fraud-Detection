@@ -1,0 +1,119 @@
+================================================================================
+✅ SWAGGER UI IS ENABLED AND RUNNING!
+================================================================================
+
+🌐 ACCESS SWAGGER UI HERE:
+================================================================================
+
+    http://127.0.0.1:8001/docs
+
+================================================================================
+
+📚 ALTERNATIVE DOCUMENTATION:
+================================================================================
+
+    ReDoc UI:       http://127.0.0.1:8001/redoc
+    OpenAPI Schema: http://127.0.0.1:8001/openapi.json
+
+================================================================================
+
+🚀 HOW TO START THE API:
+================================================================================
+
+Command:
+    python -m uvicorn api.unified_app:app --reload --port 8001
+
+Current Status: ✅ RUNNING
+
+================================================================================
+
+🎯 WHAT YOU'LL SEE IN SWAGGER UI:
+================================================================================
+
+The Swagger UI shows ALL endpoints organized in 3 sections:
+
+1. Member A: Graph Analysis
+   ✅ GET  /health
+   ✅ POST /v1/graph/score
+   ✅ POST /v1/graph/precision
+
+2. Member B: ML Anomaly Detection  
+   ✅ POST /v1/ml/detect
+   ✅ POST /v1/ml/detect-from-transactions
+   ✅ POST /run-agentB
+
+3. Unified: Both A & B Combined
+   ✅ POST /v1/unified/score ⭐ (MAIN ENDPOINT FOR DEMO)
+
+================================================================================
+
+📖 COMPLETE SWAGGER UI GUIDE:
+================================================================================
+
+    Read: SWAGGER_UI_GUIDE.md
+
+This guide includes:
+- Step-by-step instructions
+- Sample JSON for each endpoint
+- Expected responses
+- Demo walkthrough
+- Troubleshooting tips
+
+================================================================================
+
+🧪 QUICK TEST:
+================================================================================
+
+1. Open Swagger UI: http://127.0.0.1:8001/docs
+
+2. Click on "GET /health"
+
+3. Click "Try it out"
+
+4. Click "Execute"
+
+5. You should see:
+   {
+     "status": "ok",
+     "service": "Integrated Fraud Detection (Members A & B)",
+     "version": "2.0.0"
+   }
+
+✅ If you see this, Swagger UI is working perfectly!
+
+================================================================================
+
+🎬 FOR DEMO - USE THIS ENDPOINT:
+================================================================================
+
+    POST /v1/unified/score
+
+This endpoint shows BOTH Member A and Member B working together!
+
+Sample request is in: SWAGGER_UI_GUIDE.md (Test 4)
+
+================================================================================
+
+📋 FEATURES IN SWAGGER UI:
+================================================================================
+
+✅ Interactive API testing (click "Try it out")
+✅ Auto-generated documentation
+✅ Request/response examples
+✅ Schema visualization
+✅ Real-time testing
+✅ cURL command generation
+✅ Download OpenAPI spec
+✅ Organized by tags (Member A, B, Unified)
+
+================================================================================
+
+✅ READY FOR DEMO!
+================================================================================
+
+Just open: http://127.0.0.1:8001/docs
+
+All endpoints are ready to test! 🚀
+
+================================================================================
+

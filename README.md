@@ -1,28 +1,70 @@
-# Graph & Link Analysis Agent (Member A)
+# Integrated Fraud Detection System (Members A & B)
 
-Production-ready FastAPI service for graph-based fraud-ring detection using network analysis and machine learning techniques.
+Production-ready FastAPI service combining **Graph-based Fraud Ring Detection** (Member A) and **ML Anomaly Detection** (Member B) for comprehensive fraud analysis.
 
 ## 🚀 Features
 
+### Member A: Graph & Link Analysis
 - **FAST Batch Scoring**: High-performance batch processing with global graph features
 - **Precision Analysis**: Detailed 7-day vs 30-day subgraph analysis for suspicious transactions
+- **Network Analysis**: PageRank, community detection, and motif identification
+
+### Member B: ML Anomaly Detection
+- **Multi-Model Ensemble**: Isolation Forest + One-Class SVM + XGBoost
+- **Explainable AI**: SHAP-based feature importance and explanations
+- **Supervised Learning**: XGBoost classifier with train/test evaluation
+- **Standardized Output**: JSON and CSV export for team integration
+
+### System Integration
 - **Real-time API**: RESTful endpoints for seamless integration
+- **Unified Pipeline**: Both agents work together on the same data
 - **Production Ready**: Docker support, comprehensive testing, and documentation
 
 ## 📋 API Endpoints
 
+### Member A: Graph Analysis Endpoints
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/health` | GET | Service health check |
 | `/v1/graph/score` | POST | Batch FAST scoring for transactions |
 | `/v1/graph/precision` | POST | Detailed analysis for single transaction |
 
+### Member B: ML Anomaly Detection Endpoint
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/run-agentB` | POST | Run full ML anomaly detection pipeline |
+
 ## 🏗️ Architecture
 
 ```
-Raw Transactions → Graph Agent → Graph-based Scores → Team Integration
-     ↓                    ↓              ↓              ↓
-  CSV/JSON         NetworkX Graph    Fraud Scores    Members B,C,D
+                    ┌─────────────────────────────────────┐
+                    │      Raw Transaction Data           │
+                    │         (CSV/JSON)                  │
+                    └──────────────┬──────────────────────┘
+                                   │
+                    ┌──────────────┴──────────────────────┐
+                    │                                     │
+         ┌──────────▼──────────┐           ┌────────────▼─────────┐
+         │   Member A:          │           │   Member B:          │
+         │ Graph & Link Agent   │           │ ML Anomaly Detector  │
+         │  (NetworkX Graph)    │           │ (IF/SVM/XGBoost)     │
+         └──────────┬───────────┘           └────────────┬─────────┘
+                    │                                     │
+         ┌──────────▼──────────┐           ┌────────────▼─────────┐
+         │ - ring_score_7d     │           │ - ml_score           │
+         │ - ring_score_30d    │           │ - ml_supervised      │
+         │ - component_size    │           │ - anomaly_score      │
+         │ - pagerank          │           │ - SHAP features      │
+         └──────────┬───────────┘           └────────────┬─────────┘
+                    │                                     │
+                    └──────────────┬──────────────────────┘
+                                   │
+                    ┌──────────────▼──────────────────────┐
+                    │     Integrated Results              │
+                    │   (Ready for Members C & D)         │
+                    │  - Verifier Agent                   │
+                    │  - UI/Dashboard/Alerts              │
+                    └─────────────────────────────────────┘
 ```
 
 ## 🚀 Quick Start
@@ -50,13 +92,36 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the Service
+### Running the Services
+
+#### Option 1: Run Member A's Graph Analysis API
 ```bash
-# Start the API server
+# Start Member A's API server (Graph & Link Analysis)
 uvicorn api.app:app --reload --port 8001
 
 # Open API documentation
 # http://127.0.0.1:8001/docs
+```
+
+#### Option 2: Run Member B's ML Detection API
+```bash
+# Start Member B's API server (ML Anomaly Detection)
+python scripts/memberB_api.py
+
+# API runs on port 8001
+# http://127.0.0.1:8001/docs
+```
+
+#### Option 3: Run Both Together (Recommended for Demo)
+```bash
+# Terminal 1: Start Member A's Graph API
+uvicorn api.app:app --reload --port 8001
+
+# Terminal 2: Start Member B's Detection API
+python scripts/memberB_api.py --port 8002
+
+# Or run Member B's detection standalone
+python scripts/run_detection.py
 ```
 
 ### Testing
@@ -74,11 +139,23 @@ curl -X POST "http://127.0.0.1:8001/v1/graph/score" \
 
 ```
 fraud-detection/
-├── api/                    # FastAPI application
-│   └── app.py            # Main API entry point
-├── src/                   # Core scoring modules
+├── api/                    # Member A: FastAPI application
+│   └── app.py            # Graph & Link Analysis API
+├── src/                   # Member A: Core scoring modules
 │   ├── graph_scoring.py  # FAST batch scoring
-│   └── precision_scoring.py # 7d/30d analysis
+│   └── precision_scoring.py # 7d/30d temporal analysis
+├── agents/                # Member B: ML agents
+│   ├── __init__.py       # Package initialization
+│   └── anomaly_detector.py # IF/SVM/XGBoost ensemble
+├── scripts/               # Member B: Execution scripts
+│   ├── run_detection.py  # Main detection pipeline
+│   ├── memberB_api.py    # Member B's API wrapper
+│   └── export_ml_scores.py # JSON to CSV exporter
+├── data/                  # Input data directory
+│   └── (place CSV files here)
+├── models/                # Output models and scores
+│   ├── anomaly_output_standard.json # ML results
+│   └── ml_scores.csv     # Formatted scores
 ├── tests/                 # Test suite
 │   ├── test_api.py       # API tests
 │   ├── sample_request.json # Basic test data
@@ -88,15 +165,19 @@ fraud-detection/
 │   ├── api.md            # API reference
 │   ├── architecture.md   # System architecture
 │   └── responsible_ai.md # AI ethics guidelines
-├── outputs/               # Demo artifacts
+├── outputs/               # Demo artifacts & visualizations
 │   ├── sample_graph_score.json
 │   ├── ring_scores_window.csv
 │   ├── fraud_ring_7d.html
 │   └── fraud_ring_30d.html
-├── notebooks/             # Analysis notebooks
-├── requirements.txt       # Python dependencies
+├── notebooks/             # Jupyter notebooks
+│   ├── Fraud_Detection_AI.ipynb # Main analysis
+│   └── visualize_anomalies.ipynb # Visualization
+├── requirements.txt       # Python dependencies (both members)
 ├── Dockerfile            # Container configuration
 ├── Makefile              # Development commands
+├── setup.py              # Package setup
+├── TEAM_HANDOFF.md       # Integration guide
 └── README.md             # This file
 ```
 
@@ -150,19 +231,49 @@ make docker
 
 ## 🤝 Team Integration
 
-### For Member B (ML Anomaly Detector)
-- Use `/v1/graph/score` endpoint
-- Join results on `idx` field
-- Add `ml_score` column
+### ✅ Members A & B (This Repository)
+**Status**: INTEGRATED ✨
+
+Both Member A's graph analysis and Member B's ML anomaly detection work together in this codebase:
+- Member A: Graph scoring via `/v1/graph/score` and `/v1/graph/precision` endpoints
+- Member B: ML detection via `/run-agentB` endpoint and `run_detection.py` script
+- Output files: `models/ml_scores.csv` (Member B) + graph scores from API (Member A)
 
 ### For Member C (Verifier Agent)
-- Use `/v1/graph/precision` endpoint
-- Add `verifier_verdict` and `verifier_reason` columns
+- **Input**: Use Member A's `/v1/graph/precision` endpoint + Member B's `ml_scores.csv`
+- **Output**: Add `verifier_verdict` and `verifier_reason` columns
+- **Join on**: `idx` field
 
-### For Member D (UI/Alerts)
-- Display merged results table
-- Link to `fraud_ring_7d.html` visualizations
-- Call precision endpoint for detailed analysis
+### For Member D (UI/Dashboard/Alerts)
+- **Input**: Merge results from Members A, B, and C
+- **Display**: 
+  - Combined results table with all scores
+  - Link to `fraud_ring_7d.html` and `fraud_ring_30d.html` visualizations
+  - SHAP explanations from Member B
+  - Graph features from Member A
+- **Interactive**: Call Member A's precision endpoint for detailed analysis
+
+### Integration Example
+```python
+# 1. Run Member B's ML detection
+import scripts.run_detection as rd
+rd.main()  # Generates models/ml_scores.csv
+
+# 2. Call Member A's Graph API
+import requests
+response = requests.post(
+    "http://localhost:8001/v1/graph/score",
+    json={"transactions": [...]}
+)
+graph_scores = response.json()
+
+# 3. Merge on 'idx' field
+import pandas as pd
+ml_df = pd.read_csv("models/ml_scores.csv")
+graph_df = pd.DataFrame(graph_scores["results"])
+merged = pd.merge(ml_df, graph_df, on="idx")
+# Ready for Member C and D!
+```
 
 ## 📚 Documentation
 
