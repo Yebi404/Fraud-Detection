@@ -1,0 +1,18 @@
+{
+    "idx": 123456,
+    "step": 95,
+    "txn_user": "a1b2c3d4",
+    "txn_receiver": "z9y8x7w6",
+    "amount": 8420.50,
+    "type": "TRANSFER",
+    "ring_score_7d": 0.84,
+    "confidence": 0.91,
+    "precision_enhanced": true,
+    "reasons_7d": [
+      {"feature":"shared_receiver_degree","value":15,"impact":0.23},
+      {"feature":"pagerank_user","value":0.031,"impact":0.19},
+      {"feature":"kcore","value":4,"impact":0.12}
+    ],
+    "subgraph_ref": "fraud_ring_7d.html"
+  }
+  
