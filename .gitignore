@@ -46,3 +46,6 @@ models/verification_report.json
 models/anomaly_output_standard.json
 outputs/
 *.log
+
+# Large data files that should not be committed
+*.csv
