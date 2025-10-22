@@ -4,6 +4,8 @@ Unified Fraud Detection API
 Integrates Member A (Graph Analysis) and Member B (ML Anomaly Detection)
 """
 from typing import List, Any, Dict, Optional
+import math
+import numpy as np
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field, field_validator
 import pandas as pd
@@ -23,6 +25,41 @@ app = FastAPI(
     version="2.0.0",
     description="Combined Graph & Link Analysis + ML Anomaly Detection service",
 )
+
+# ------------ Utils ------------
+
+def _sanitize_for_json(obj: Any) -> Any:
+    """Recursively replace NaN/Inf values with JSON-safe ones (None).
+    - float NaN/Inf -> None
+    - pandas/numpy NaNs -> None
+    - lists/dicts -> sanitize elements
+    """
+    if obj is None:
+        return None
+    if isinstance(obj, float):
+        if math.isnan(obj) or math.isinf(obj):
+            return None
+        return obj
+    if isinstance(obj, (np.floating,)):
+        val = float(obj)
+        if math.isnan(val) or math.isinf(val):
+            return None
+        return val
+    if isinstance(obj, (int, np.integer)):
+        return int(obj)
+    if isinstance(obj, (str, bool)):
+        return obj
+    if isinstance(obj, list):
+        return [_sanitize_for_json(x) for x in obj]
+    if isinstance(obj, dict):
+        return {k: _sanitize_for_json(v) for k, v in obj.items()}
+    # Fallback for pandas/numpy objects
+    try:
+        if pd.isna(obj):
+            return None
+    except Exception:
+        pass
+    return obj
 
 # ------------ Models ------------
 
@@ -129,7 +166,10 @@ def ml_detect(req: MLDetectionRequest):
         
         # Train models
         detector.fit()
-        detector.train_xgboost()
+        try:
+            detector.train_xgboost()
+        except Exception as e:
+            print(f"XGBoost training skipped: {e}")
         
         # Generate predictions
         results = detector.predict()
@@ -160,7 +200,10 @@ def ml_detect_from_transactions(req: ScoreRequest):
         # Train models
         detector.fit()
         if "isFraud" in df.columns:
-            detector.train_xgboost()
+            try:
+                detector.train_xgboost()
+            except Exception as e:
+                print(f"XGBoost training skipped: {e}")
         
         # Generate predictions
         results = detector.predict()
@@ -217,7 +260,10 @@ def unified_score(req: UnifiedRequest):
             detector = AnomalyDetector(df, target_column="isFraud" if "isFraud" in df.columns else None, svm_sample_size=10000)
             detector.fit()
             if "isFraud" in df.columns:
-                detector.train_xgboost()
+                try:
+                    detector.train_xgboost()
+                except Exception as e:
+                    print(f"XGBoost training skipped: {e}")
             
             ml_results = detector.predict()
             if "isFraud" in df.columns:
@@ -243,7 +289,7 @@ def unified_score(req: UnifiedRequest):
         
         results["integrated_results"] = merged.to_dict(orient="records")
     
-    return results
+    return _sanitize_for_json(results)
 
 # ------------ Legacy Member B Route (for backward compatibility) ------------
 

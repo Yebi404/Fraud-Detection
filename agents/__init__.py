@@ -39,12 +39,15 @@ class AnomalyDetector:
         self.data_scaled = self.scaler.fit_transform(self.features.values)
 
         self.svm_sample_size = svm_sample_size
-        self.svm_data_scaled = resample(
-            self.data_scaled,
-            n_samples=min(svm_sample_size, len(self.data_scaled)),
-            random_state=42,
-            replace=False,
-        )
+        if len(self.data_scaled) <= svm_sample_size:
+            self.svm_data_scaled = self.data_scaled
+        else:
+            self.svm_data_scaled = resample(
+                self.data_scaled,
+                n_samples=svm_sample_size,
+                random_state=42,
+                replace=False,
+            )
 
         self.models = {
             "IsolationForest": IsolationForest(
@@ -95,28 +98,41 @@ class AnomalyDetector:
         return results
 
     def train_xgboost(self):
+        if self.label_col not in self.data.columns:
+            return None
         try:
             from xgboost import XGBClassifier
+            from sklearn.model_selection import train_test_split
         except ImportError:
-            print("XGBoost not installed. To enable supervised: pip install xgboost")
-            return None
-
-        if self.label_col not in self.data.columns:
-            print(f"'{self.label_col}' not in dataset. Skipping supervised training.")
             return None
 
         X = self.features.values
         y = self.data[self.label_col].values
+
+        # ===== TRAIN / TEST SPLIT =====
+        if len(X) < 5:
+            # For very small datasets, use all data for training
+            X_train, X_test = X, X
+            y_train, y_test = y, y
+        else:
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42, stratify=y if len(np.unique(y)) > 1 else None
+            )
+
+        # ===== XGBOOST MODEL =====
+        # Fixed configuration without problematic parameters
         model = XGBClassifier(
-            use_label_encoder=False,
-            eval_metric="logloss",
-            n_jobs=-1,
+            n_estimators=50,
+            max_depth=3,
+            learning_rate=0.1,
             random_state=42,
+            eval_metric='logloss',
+            base_score=0.5
         )
-        print(f"Training XGBoost on {len(self.data)} rows...")
-        model.fit(X, y)
+        
+        model.fit(X_train, y_train)
         self.fitted_models["XGBoost"] = model
-        print("XGBoost trained.")
+        print(f"✅ XGBoost trained on {len(X_train)} samples")
         return model
 
     def add_risk_scores(self, results):

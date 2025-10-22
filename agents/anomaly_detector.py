@@ -34,12 +34,15 @@ class AnomalyDetector:
         self.data_scaled = self.scaler.fit_transform(self.features.values)
 
         self.svm_sample_size = svm_sample_size
-        self.svm_data_scaled = resample(
-            self.data_scaled,
-            n_samples=min(svm_sample_size, len(self.data_scaled)),
-            random_state=42,
-            replace=False,
-        )
+        if len(self.data_scaled) <= svm_sample_size:
+            self.svm_data_scaled = self.data_scaled
+        else:
+            self.svm_data_scaled = resample(
+                self.data_scaled,
+                n_samples=svm_sample_size,
+                random_state=42,
+                replace=False,
+            )
 
         self.models = {
             "IsolationForest": IsolationForest(
@@ -109,23 +112,29 @@ class AnomalyDetector:
         y = self.data[self.target_column].values
 
         # ===== TRAIN / TEST SPLIT =====
-        self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
-            X, y, test_size=0.2, random_state=42, stratify=y
-        )
+        if len(X) < 5:
+            # For very small datasets, use all data for training
+            self.X_train, self.X_test = X, X
+            self.y_train, self.y_test = y, y
+        else:
+            self.X_train, self.X_test, self.y_train, self.y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42, stratify=y if len(np.unique(y)) > 1 else None
+            )
 
+        # ===== XGBOOST MODEL =====
+        # Fixed configuration without problematic parameters
         model = XGBClassifier(
-            use_label_encoder=False,
-            eval_metric="logloss",
-            n_jobs=-1,
+            n_estimators=50,
+            max_depth=3,
+            learning_rate=0.1,
             random_state=42,
+            eval_metric='logloss',
+            base_score=0.5
         )
+        
         model.fit(self.X_train, self.y_train)
         self.fitted_models["XGBoost"] = model
-
-        # Store predictions for all data so ml_score CSV stays same format
-        proba = model.predict_proba(X)[:, 1]
-        self.data["ml_score"] = proba
-
+        print(f"✅ XGBoost trained on {len(self.X_train)} samples")
         return model
 
     def evaluate_model(self):
