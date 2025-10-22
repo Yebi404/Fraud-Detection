@@ -1,7 +1,0 @@
-{
-    "transactions": [
-      { "idx": 1, "step": 95, "type": "TRANSFER", "amount": 8420.5, "nameOrig": "U1", "nameDest": "R1" },
-      { "idx": 2, "step": 96, "type": "CASH_OUT", "amount": 6500, "nameOrig": "U2", "nameDest": "R1" }
-    ]
-  }
-  

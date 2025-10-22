@@ -1,0 +1,39 @@
+[33m83f8eb1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mtransaction_verifier[m[33m)[m Remove large data files and update gitignore
+M	.gitattributes
+M	.gitignore
+[33mbf8a1df[m Clean up unnecessary files and duplicates
+D	outputs/ring_scores_window.csv
+D	requirments.txt
+[33m290c6bf[m Resolve merge conflicts and add all project files
+[33mc969b7b[m Clean up repository: remove large files and update .gitignore
+M	.gitignore
+D	agents/__pycache__/__init__.cpython-313.pyc
+D	agents/__pycache__/transaction_verifier.cpython-313.pyc
+D	data/ring_scores_window.csv
+D	models/verification_report.json
+D	requirments.txt
+D	scripts/__pycache__/__init__.cpython-313.pyc
+D	scripts/__pycache__/run_agentC_api.cpython-313.pyc
+D	scripts/__pycache__/run_verifier.cpython-313.pyc
+[33meb3991b[m Ignore large file ml_scores.csv
+M	.gitignore
+D	data/ml_scores.csv
+[33mec7d486[m Add ml_scores.csv via Git LFS
+A	data/ml_scores.csv
+[33mba8b74b[m Track ml_scores.csv with Git LFS
+A	.gitignore
+[33m871cfb1[m Stop tracking large file ml_scores.csv
+D	data/ml_scores.csv
+[33m622ca85[m add transaction verifier agent
+A	data/ml_scores.csv
+A	list_gemini_models.py
+A	requirements.txt
+A	scripts/__init__.py
+A	scripts/__pycache__/__init__.cpython-313.pyc
+A	scripts/__pycache__/run_agentC_api.cpython-313.pyc
+A	scripts/run_agentC_api.py
+A	simple_gemini_test.py
+A	test_gemini_generation.py
+A	test_gemini_llm.py
+[33m00ea6b8[m[33m ([m[1;32mmain[m[33m)[m Configure Git LFS to track large data files
+A	.gitattributes
