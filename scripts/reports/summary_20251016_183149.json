@@ -1,0 +1,31 @@
+{
+  "generated_at": "2025-10-16T18:31:49.776895",
+  "mode": "production",
+  "source": null,
+  "data_summary": {
+    "total": 10000,
+    "deny": 10,
+    "flag": 5990,
+    "pass": 4000,
+    "llm_enabled": true
+  },
+  "alert_summary": {
+    "total_alerts": 10009,
+    "by_severity": {
+      "critical": 5,
+      "high": 19,
+      "medium": 9985,
+      "low": 0,
+      "info": 0
+    },
+    "by_type": {
+      "unusual_pattern": 9985,
+      "threshold_breach": 4,
+      "high_risk_transaction": 18,
+      "velocity_spike": 1,
+      "repeated_denials": 1
+    },
+    "requires_immediate_action": 24
+  },
+  "llm_summary": "A significant volume of 6000 suspicious transactions were identified, yet only 10 were denied, leaving 5990 merely flagged. The **Ring Score** is a critical risk indicator, averaging very high at 0.90 and consistently strong for denied cases, while the **ML Anomaly Score** is low on average but highly indicative for the top denied transactions. This discrepancy suggests the current denial threshold is likely too permissive, leaving substantial potential fraud unaddressed. The fraud investigation team should immediately prioritize reviewing the 5990 flagged transactions, focusing on those with high Ring and Combined Scores, and re-evaluate the automated denial policy thresholds for greater effectiveness."
+}
