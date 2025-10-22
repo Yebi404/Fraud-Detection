@@ -1,4 +1,5 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 import pandas as pd
 
 app = FastAPI(title="IRWA Fraud API")
@@ -19,3 +20,32 @@ def get_scores():
 def health_check():
     """Simple health check"""
     return {"status": "ok", "records": len(df)}
+
+# ADD THIS NEW ENDPOINT:
+class TransactionRequest(BaseModel):
+    transaction_id: str = None
+    idx: int = None
+
+@app.post("/run-agentB")
+def run_agent_b(request: TransactionRequest = None):
+    """
+    Main endpoint for Member A's verifier to call
+    Returns anomaly scores for verification
+    """
+    try:
+        if request and request.idx is not None:
+            # Return specific transaction score
+            result = df[df["idx"] == request.idx]
+            if result.empty:
+                raise HTTPException(status_code=404, detail="Transaction not found")
+            return result.to_dict(orient="records")[0]
+        else:
+            # Return all scores
+            return {
+                "status": "success",
+                "message": "Anomaly scores ready",
+                "total_records": len(df),
+                "scores": df[["idx", "ml_score"]].to_dict(orient="records")
+            }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
