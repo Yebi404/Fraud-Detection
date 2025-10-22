@@ -97,7 +97,7 @@ pip install -r requirements.txt
 #### Option 1: Run Member A's Graph Analysis API
 ```bash
 # Start Member A's API server (Graph & Link Analysis)
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 
 # Open API documentation
 # http://127.0.0.1:8001/docs
@@ -115,7 +115,7 @@ python scripts/memberB_api.py
 #### Option 3: Run Both Together (Recommended for Demo)
 ```bash
 # Terminal 1: Start Member A's Graph API
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 
 # Terminal 2: Start Member B's Detection API
 python scripts/memberB_api.py --port 8002

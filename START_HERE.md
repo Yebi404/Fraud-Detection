@@ -82,7 +82,7 @@ Then:
 ### Option 3: Separate Services (Show Microservices)
 ```bash
 # Terminal 1: Member A
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 
 # Terminal 2: Member B
 python scripts/memberB_api.py
@@ -135,7 +135,7 @@ python test_member_b.py
 python scripts/demo_integrated.py
 
 # Start Member A API
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 
 # Start Member B detection
 python scripts/run_detection.py

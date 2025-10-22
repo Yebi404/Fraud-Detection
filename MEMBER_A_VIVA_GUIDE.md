@@ -524,7 +524,7 @@ Your outputs:
 
 ### **Step 1: Start Your API**
 ```bash
-python -m uvicorn api.app:app --reload --port 8001
+python -m uvicorn api.unified_app:app --reload --port 8001
 ```
 
 ### **Step 2: Show Swagger UI**

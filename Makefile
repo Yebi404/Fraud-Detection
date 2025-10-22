@@ -19,7 +19,7 @@ install:
 
 # Start development server
 run:
-	uvicorn api.app:app --reload --port 8001
+	uvicorn api.unified_app:app --reload --port 8001
 
 # Run tests
 test:

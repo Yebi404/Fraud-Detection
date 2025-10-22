@@ -53,7 +53,7 @@ python generate_visualizations.py
 
 ```bash
 cd "Fraud-Detection"
-python -m uvicorn api.app:app --reload --port 8001
+python -m uvicorn api.unified_app:app --reload --port 8001
 ```
 
 **What this does:**
@@ -382,7 +382,7 @@ ring_score_7d: 0.87    +    ml_score: 0.65
 **30 Minutes Before Viva:**
 - [ ] Run `python generate_visualizations.py`
 - [ ] Check outputs folder has 2 PNG files
-- [ ] Start API: `python -m uvicorn api.app:app --reload --port 8001`
+- [ ] Start API: `python -m uvicorn api.unified_app:app --reload --port 8001`
 - [ ] Open Swagger UI in browser
 - [ ] Test one endpoint to confirm it works
 - [ ] Open visualization PNGs to view them
@@ -417,7 +417,7 @@ ring_score_7d: 0.87    +    ml_score: 0.65
 **Solution:**
 ```bash
 python -m pip install fastapi uvicorn networkx pandas
-python -m uvicorn api.app:app --reload --port 8001
+python -m uvicorn api.unified_app:app --reload --port 8001
 ```
 
 ### Problem: Visualization script fails
@@ -454,7 +454,7 @@ Then use: `http://127.0.0.1:8002/docs`
 python generate_visualizations.py
 
 # 2. Start API
-python -m uvicorn api.app:app --reload --port 8001
+python -m uvicorn api.unified_app:app --reload --port 8001
 
 # 3. Open browser
 http://127.0.0.1:8001/docs

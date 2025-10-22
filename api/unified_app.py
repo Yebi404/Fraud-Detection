@@ -9,7 +9,6 @@ from pydantic import BaseModel, Field, field_validator
 import pandas as pd
 import os
 import sys
-import json
 
 # Add project root to path
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -260,5 +259,7 @@ if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8001, reload=True)
 
-
-
+def main():
+    """Entry point for console script"""
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8001)

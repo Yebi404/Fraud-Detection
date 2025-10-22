@@ -13,7 +13,7 @@ print()
 # Test 1: Import check
 print("Test 1: Checking imports...")
 try:
-    from api.app import app
+    from api.unified_app import app
     from src.graph_scoring import score_batch, build_graph
     from src.precision_scoring import precision_for_txn
     print("✅ All imports successful!")

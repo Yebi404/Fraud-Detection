@@ -82,7 +82,7 @@ curl -X POST "http://localhost:8001/v1/unified/score" \
 
 ### Option 2: Member A's API Only
 ```bash
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 ```
 
 ### Option 3: Member B's API Only
@@ -93,7 +93,7 @@ python scripts/memberB_api.py
 ### Option 4: Both APIs Separately (Microservices)
 ```bash
 # Terminal 1: Member A
-uvicorn api.app:app --reload --port 8001
+uvicorn api.unified_app:app --reload --port 8001
 
 # Terminal 2: Member B
 python scripts/memberB_api.py
