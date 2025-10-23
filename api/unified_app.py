@@ -148,6 +148,158 @@ def graph_precision(req: PrecisionRequest):
 
 # ------------ Member B Routes (ML Anomaly Detection) ------------
 
+@app.get("/v1/ml/data", tags=["Member B: ML Anomaly Detection"])
+def get_csv_data(limit: int = 1000, offset: int = 0):
+    """
+    Member B: Get CSV data from the data folder with pagination
+    Returns the transaction data for ML analysis with pagination support
+    
+    Parameters:
+    - limit: Maximum number of records to return (default: 1000, max: 10000)
+    - offset: Number of records to skip (default: 0)
+    """
+    try:
+        # Path to the CSV file in the data folder
+        csv_path = os.path.join(project_root, "data", "base_txns_10k_ml_slim.csv")
+        
+        if not os.path.exists(csv_path):
+            raise HTTPException(status_code=404, detail="CSV data file not found")
+        
+        # Limit the maximum records to prevent API hanging
+        limit = min(limit, 10000)  # Cap at 10000 records max (full dataset)
+        
+        # Read the CSV data with pagination
+        data = pd.read_csv(csv_path, skiprows=range(1, offset + 1), nrows=limit)
+        
+        # Get total count without loading all data
+        total_count = len(pd.read_csv(csv_path, usecols=[0]))  # Just count first column
+        
+        # Convert to JSON-safe format
+        data_dict = data.to_dict(orient="records")
+        
+        return {
+            "status": "success",
+            "file_path": csv_path,
+            "count": len(data_dict),
+            "total_count": total_count,
+            "limit": limit,
+            "offset": offset,
+            "has_more": (offset + limit) < total_count,
+            "columns": list(data.columns),
+            "data": _sanitize_for_json(data_dict)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read CSV data: {str(e)}")
+
+@app.get("/v1/ml/data/sample", tags=["Member B: ML Anomaly Detection"])
+def get_csv_data_sample(limit: int = 100):
+    """
+    Member B: Get a sample of CSV data from the data folder
+    Returns a limited number of records for testing purposes
+    
+    Parameters:
+    - limit: Number of records to return (default: 100, max: 10000)
+    """
+    try:
+        # Path to the CSV file in the data folder
+        csv_path = os.path.join(project_root, "data", "base_txns_10k_ml_slim.csv")
+        
+        if not os.path.exists(csv_path):
+            raise HTTPException(status_code=404, detail="CSV data file not found")
+        
+        # Limit the sample size to prevent issues
+        limit = min(limit, 10000)  # Cap at 10000 records for samples (full dataset)
+        
+        # Read the CSV data with limit
+        data = pd.read_csv(csv_path, nrows=limit)
+        
+        # Convert to JSON-safe format
+        data_dict = data.to_dict(orient="records")
+        
+        return {
+            "status": "success",
+            "file_path": csv_path,
+            "limit": limit,
+            "count": len(data_dict),
+            "columns": list(data.columns),
+            "data": _sanitize_for_json(data_dict)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to read CSV data: {str(e)}")
+
+@app.get("/v1/ml/data/chunks", tags=["Member B: ML Anomaly Detection"])
+def get_csv_data_chunks(chunk_size: int = 1000):
+    """
+    Member B: Get CSV data in manageable chunks
+    Returns information about how to paginate through all data
+    
+    Parameters:
+    - chunk_size: Size of each chunk (default: 1000, max: 10000)
+    """
+    try:
+        # Path to the CSV file in the data folder
+        csv_path = os.path.join(project_root, "data", "base_txns_10k_ml_slim.csv")
+        
+        if not os.path.exists(csv_path):
+            raise HTTPException(status_code=404, detail="CSV data file not found")
+        
+        # Limit chunk size
+        chunk_size = min(chunk_size, 10000)  # Allow up to full dataset
+        
+        # Get total count efficiently
+        total_count = len(pd.read_csv(csv_path, usecols=[0]))
+        
+        # Calculate number of chunks needed
+        total_chunks = (total_count + chunk_size - 1) // chunk_size
+        
+        return {
+            "status": "success",
+            "file_path": csv_path,
+            "total_count": total_count,
+            "chunk_size": chunk_size,
+            "total_chunks": total_chunks,
+            "instructions": {
+                "message": "Use /v1/ml/data with limit and offset parameters to get chunks",
+                "example_urls": [
+                    f"/v1/ml/data?limit={chunk_size}&offset=0",
+                    f"/v1/ml/data?limit={chunk_size}&offset={chunk_size}",
+                    f"/v1/ml/data?limit={chunk_size}&offset={chunk_size * 2}"
+                ]
+            }
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get CSV data info: {str(e)}")
+
+@app.get("/v1/ml/data/info", tags=["Member B: ML Anomaly Detection"])
+def get_csv_data_info():
+    """
+    Member B: Get information about the CSV data file
+    Returns metadata about the dataset without loading all data
+    """
+    try:
+        # Path to the CSV file in the data folder
+        csv_path = os.path.join(project_root, "data", "base_txns_10k_ml_slim.csv")
+        
+        if not os.path.exists(csv_path):
+            raise HTTPException(status_code=404, detail="CSV data file not found")
+        
+        # Get file info
+        file_stats = os.stat(csv_path)
+        
+        # Read just the header to get column info
+        data_sample = pd.read_csv(csv_path, nrows=0)
+        
+        return {
+            "status": "success",
+            "file_path": csv_path,
+            "file_size_bytes": file_stats.st_size,
+            "file_size_mb": round(file_stats.st_size / (1024 * 1024), 2),
+            "columns": list(data_sample.columns),
+            "column_count": len(data_sample.columns)
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to get CSV data info: {str(e)}")
+
 @app.post("/v1/ml/detect", tags=["Member B: ML Anomaly Detection"])
 def ml_detect(req: MLDetectionRequest):
     """
@@ -216,6 +368,47 @@ def ml_detect_from_transactions(req: ScoreRequest):
             "count": len(results),
             "results": results,
             "models_used": ["IsolationForest", "OneClassSVM"] + (["XGBoost"] if "isFraud" in df.columns else [])
+        }
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"ML detection failed: {str(e)}")
+
+@app.post("/v1/ml/detect-from-csv", tags=["Member B: ML Anomaly Detection"])
+def ml_detect_from_csv():
+    """
+    Member B: Run ML detection directly on the CSV data from the data folder
+    Convenient endpoint that uses the built-in CSV file
+    """
+    try:
+        # Path to the CSV file in the data folder
+        csv_path = os.path.join(project_root, "data", "base_txns_10k_ml_slim.csv")
+        
+        if not os.path.exists(csv_path):
+            raise HTTPException(status_code=404, detail="CSV data file not found")
+        
+        # Load data
+        data = pd.read_csv(csv_path)
+        
+        # Initialize detector
+        detector = AnomalyDetector(data, target_column="isFraud", svm_sample_size=10000)
+        
+        # Train models
+        detector.fit()
+        try:
+            detector.train_xgboost()
+        except Exception as e:
+            print(f"XGBoost training skipped: {e}")
+        
+        # Generate predictions
+        results = detector.predict()
+        results = detector.add_risk_scores(results)
+        results = detector.add_shap_explanations(results, model_name="IsolationForest")
+        
+        return {
+            "status": "success",
+            "file_path": csv_path,
+            "count": len(results),
+            "results": results,
+            "models_used": ["IsolationForest", "OneClassSVM", "XGBoost"]
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"ML detection failed: {str(e)}")
