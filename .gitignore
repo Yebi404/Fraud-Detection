@@ -46,3 +46,4 @@ models/verification_report.json
 models/anomaly_output_standard.json
 outputs/
 *.log
+data/ml_scores.csv
